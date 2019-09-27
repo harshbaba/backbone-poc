@@ -1,0 +1,72 @@
+.layout-header{position: fixed;top:0; left:0;width:100%;padding: 15px 15px;text-align: center;
+    -webkit-box-shadow: 0px 3px 2px 0px rgba(237,206,237,1);
+-moz-box-shadow: 0px 3px 2px 0px rgba(237,206,237,1);
+box-shadow: 0px 3px 2px 0px rgba(237,206,237,1);
+}
+.layout-footer{position: fixed;bottom:0; left:0;width:100%;text-align: center;
+    -webkit-box-shadow: 0px -3px 2px 0px rgba(237,206,237,1);
+-moz-box-shadow: 0px -3px 2px 0px rgba(237,206,237,1);
+box-shadow: 0px -3px 2px 0px rgba(237,206,237,1);
+}
+
+a{
+   text-decoration: none;
+   color: #000; 
+}
+
+h2{
+    font-size: 26px;
+}
+
+.footer-menu{
+    width: 100%;
+}
+.footer-menu > li{
+    float: left;
+    width: 25%;
+    border-right:1px solid rgba(237,206,237,1);
+}
+
+.footer-menu > li:last-child{
+    border-right: 0;
+}
+.footer-menu > li a{
+    font-size: 20px;
+    line-height: 35px;
+    display: block;
+    padding: 10px;
+}
+
+.layout-content{
+    padding: 90px 20px;
+}
+
+.reminder-list-box{
+    margin-top: 45px;
+    border: 1px solid #000;
+}
+.dates-list > li:last-child .dates-list-ind{
+    border-bottom: 0;
+}
+.dates-list-ind{
+    display: table;
+    border-bottom: 1px solid #000;
+    width: 100%;
+}
+.dates-col{
+    display: table-cell;
+    vertical-align: middle;
+    width: 20%;
+    border-right: 1px solid #000;
+    padding: 10px;
+    text-align: center;
+
+}
+.dates-col.control{
+    text-align: center;
+    border-right: 0;
+}
+.dates-col.control a{
+    margin: 0 5px;
+    display: inline-block;
+}
