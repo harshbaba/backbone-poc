@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <title>Date Reminder App</title>
+        <link rel="stylesheet" href="assets/css/reset.css">
+        <link rel="stylesheet" href="assets/css/custom.css">
+    </head>
+    <body>
+        <div id="main">
+            
+        </div>
+        <script id="entry-template" type="text/x-handlebars-template">
+            <div class="layout-header">
+                <h2>Header</h2>
+            </div>
+            <div class="layout-content">
+                <div class="main-container">
+                    <div id="main-content" class="main-content">
+                    </div>
+                </div>
+            </div>
+            <div class="layout-footer">
+                <ul class="footer-menu">
+                    <li>
+                        <div class="footer-menu-ind">
+                            <a href="#">Dashboard</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="footer-menu-ind">
+                            <a href="#upcoming-dates">Upcoming Dates</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="footer-menu-ind">
+                            <a href="#historical-dates">Historical Dates</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="footer-menu-ind">
+                            <a href="#my-profile">My Profile</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </script>
+
+        <script id="dashboard" type="text/x-handlebars-template">
+            <div class="dashboard-main">
+                <h2>Dashboard</h2>
+            </div>
+            <div class="reminder-list-box">
+                <ul class="dates-list">
+                    {{#each this.data as |date|}}
+                    <li>
+                        <div class="dates-list-ind">
+                            <div class="dates-col">{{date.eventName}}</div>
+                            <div class="dates-col">{{date.eventType}}</div>
+                            <div class="dates-col">{{date.eventDate}}</div>
+                            <div class="dates-col"><a href="#">View & Edit</a></div>
+                            <div class="dates-col control">
+                                <a href="#">Delete</a>
+                            </div>
+                        </div>
+                    </li>
+                    {{/each}}
+                </ul>
+            </div>
+        </script>
+        <script id="upcoming-dates" type="text/x-handlebars-template">
+            <div class="reminder-list-box">
+                <h2>All Upcoming Dates</h2>
+            </div>
+        </script>
+        <script id="my-profile" type="text/x-handlebars-template">
+            <div class="my-profile-box">
+                <h2>My Profile</h2>
+            </div>
+        </script>
+        <script id="historical-dates" type="text/x-handlebars-template">
+            <div class="hitorical-dates-box">
+                <h2>Historical dates Box</h2>
+            </div>
+        </script>
+        <script src="assets/js/libs/jquery-2.2.4.min.js"></script>
+        <script src="assets/js/libs/handlebars-4.3.1.min.js"></script>
+        <script src="assets/js/libs/underscore-min-1.9.1.js"></script>
+        <script src="assets/js/libs/backbone-min-1.4.0.js"></script>
+        <script src="app.js"></script>
+    </body>
+</html>
